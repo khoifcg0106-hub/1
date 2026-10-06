@@ -1,0 +1,22 @@
+services:
+  dashboard:
+    build:
+      context: ./Mark-LIII-main
+      dockerfile: Dockerfile.dashboard
+    ports:
+      - "3000:8000"
+    volumes:
+      - ./Mark-LIII-main:/app
+    working_dir: /app
+    command: ["python", "run_dashboard.py"]
+    restart: on-failure
+    healthcheck:
+      test:
+        - CMD
+        - python3
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8000/login'); print('ok')"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s

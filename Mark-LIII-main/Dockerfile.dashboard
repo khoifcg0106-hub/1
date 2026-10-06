@@ -1,0 +1,11 @@
+FROM python:3.12-slim
+
+# Dashboard-only dependencies (the full app needs PyQt6/audio/desktop libs
+# that cannot run headless; the web dashboard only needs these four).
+RUN pip install --no-cache-dir \
+        fastapi \
+        "uvicorn[standard]" \
+        cryptography \
+        python-multipart
+
+WORKDIR /app

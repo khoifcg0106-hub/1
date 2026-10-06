@@ -1,0 +1,17 @@
+{
+  "task_id": "1008e703-3dab-4efe-a3e0-ce91bde0a20e",
+  "documents": [
+    "doc-a",
+    "doc-b"
+  ],
+  "current_document": null,
+  "completed_documents": [
+    "doc-a"
+  ],
+  "failed_documents": {},
+  "current_operation": "compare",
+  "artifacts": [],
+  "status": "pending",
+  "created_at": "2026-09-17T02:04:02+00:00",
+  "updated_at": "2026-09-17T02:04:02+00:00"
+}
